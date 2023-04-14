@@ -1,0 +1,30 @@
+CREATE OR REPLACE FUNCTION FNC_PERSONS_MALE()
+    RETURNS TABLE
+            (
+                NAME VARCHAR
+            )
+AS
+$PERSON$
+SELECT NAME
+FROM PERSON
+WHERE GENDER = 'male'
+$PERSON$ LANGUAGE SQL;
+
+CREATE OR REPLACE FUNCTION FNC_PERSONS_FEMALE()
+    RETURNS TABLE
+            (
+                NAME VARCHAR
+            )
+AS
+$PERSON$
+SELECT NAME
+FROM PERSON
+WHERE GENDER = 'female'
+$PERSON$ LANGUAGE SQL;
+
+
+SELECT *
+FROM fnc_persons_male();
+
+SELECT *
+FROM fnc_persons_female();
