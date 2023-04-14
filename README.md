@@ -1,1 +1,1 @@
-2-week intensive SQL(Posgres) course at school 21!!!
+2-week intensive PostgreSQL course at school 21!!!
